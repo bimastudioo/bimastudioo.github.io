@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="top-navbar navbar navbar-light bg-dark mb-2" id="home">
+        <span class="navbar-brand" style="color: white;">Bimachord Studio</span>
+    </nav>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>Formulir Pemesanan</h3>
+      </div>
+      <div class="card-body">
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="name"><i class="fa fa-user"></i> Nama</label>
+            <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="phone"><i class="fa fa-phone"></i> Nomor</label>
+            <input type="number" class="form-control" id="phone" placeholder="Nomor Telepon Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="event"><i class="fa fa-calendar"></i> Acara</label>
+            <input type="text" class="form-control" id="event" placeholder="Jenis Acara" required>
+          </div>
+          <div class="form-group">
+            <label for="package"><i class="fa fa-gift"></i> Pilih Paket</label>
+            <select class="form-control" id="package" required>
+              <option value="">Pilih Paket</option>
+              <option value="paket1">Paket 1</option>
+              <option value="paket2">Paket 2</option>
+              <option value="paket3">Paket 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="template"><i class="fa fa-paint-brush"></i> Pilih Template</label>
+            <select class="form-control" id="template" required>
+              <option value="">Pilih Template</option>
+              <option value="template1">Template 1</option>
+              <option value="template2">Template 2</option>
+              <option value="template3">Template 3</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-success" onclick="sendMessage()">
+            <i class="fab fa-whatsapp me-1"></i> Kirim di Whastapp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    <div class="container" id="harga">
+        <div class="row mt-5">
+            <div class="col-md-4" >
+                <div class="card p-3 shadow bg-dark">
+                    <h3 class="text-center outline-text mb-3">Hemat</h3>
+                    <h1 class="text-center text-light mb-3">Rp 75.000</h1>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Sebar undangan tanpa batas</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Custom Nama Tamu</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Profil mempelai</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Informasi Acara</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Countdown Timer</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Navigasi Google Map</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Quotes/ Ayat Suci</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Ucapan Dan Doa</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Wedding Gift/ Angpao Digital</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> RSVP Konfirmasi Kehadiran</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Kisah Cinta</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Video</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Gallery Foto</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Request Lagu</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Revisi Maksimal 2 hari</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Aktif 6 Bulan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="card p-3 shadow bg-dark">
+                    <div class="text-right"><span class="badge badge-success mb-3">POPULAR</span></div>
+                    <h3 class="text-center outline-text mb-3">Ekonomis</h3>
+                    <h1 class="text-center text-light mb-3">Rp 99.000</h1>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Sebar undangan tanpa batas</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Custom Nama Tamu</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Profil mempelai</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Informasi Acara</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Countdown Timer</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Navigasi Google Map</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Quotes/ Ayat Suci</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Ucapan Dan Doa</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Wedding Gift/ Angpao Digital</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> RSVP Konfirmasi Kehadiran</li>
+                        <li class="list-group-item"><i class="fas fa-times-circle text-danger"></i> Kisah Cinta</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Video</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Gallery Foto</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Request Lagu</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Revisi Maksimal 2 hari</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Aktif 1 Tahun</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="card p-3 shadow bg-dark">
+                    <div class="text-right"><span class="badge badge-success mb-3">BEST SELLER</span></div>
+                    <h3 class="text-center outline-text mb-3">Premium</h3>
+                    <h1 class="text-center text-light mb-3">Rp 120.000</h1>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Sebar undangan tanpa batas</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Custom Nama Tamu</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Profil mempelai</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Informasi Acara</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Countdown Timer</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Navigasi Google Map</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Quotes/ Ayat Suci</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Ucapan Dan Doa</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Wedding Gift/ Angpao Digital</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> RSVP Konfirmasi Kehadiran</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Kisah Cinta</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Video</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Gallery Foto</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Request Lagu</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Revisi Maksimal 2 hari</li>
+                        <li class="list-group-item"><i class="fas fa-check-circle text-success"></i> Aktif 1 Tahun</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <div style="border-top: 3px solid black; margin: 20px 0;"></div>
+
+                <h3>Ingin Jadi Reseller?</h3>
+                <h4>Silahkan Hubungi Kami</h4>
+                <button onclick="window.location.href='https://wa.me/6287841947229';" class="btn btn-primary mt-3"><i class="fas fa-comments"></i> Chat Sekarang</button>
+              <div  style="border-top: 3px solid black; margin: 20px 0;"></div>
+
+            </div>
+        </div>
+    </div>    
+              
+              
+        <!-- Footer -->  
+  <section class="bg-merah text-center">        
+    <div class="container" style="padding: 20px; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+        <h4 class="mb-4 outline-text">Anda Sudah Tidak Sabar Lagi</h4>
+        <h5 class="mb-4">Untuk Segera Membagikan Undangan Pernikahan Digitalnya, Kan.</h5>
+        <p class="mb-4 outline-text">Segera hubungi kami untuk pemesanan!</p>
+        <a href="https://wa.me/6287841947229" class="btn-whatsapp" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i> Klik Whatsapp
+        </a>
+        <p class="mb-4 mt-3">Tlp: 087841947229</p>
+        <div class="social-icons" style="margin-top: 20px;">
+            <i class="fab fa-instagram" style="font-size: 24px; color: white; margin: 0 10px;"></i>
+            <a class="fab fa-facebook-f" style="font-size: 24px; color: white; margin: 0 10px;" target="_blank" href="https://www.facebook.com/profile.php?id=100093961165463"></a>
+        </div>
+        <div style="border-top: 3px solid #ffffff; margin: 20px 0;"></div>
+
+        <div class="bottom-text outline-text" style="margin-top: 50px; font-size: 14px;">
+            Semoga Pernikahan Anda Barakah Dan
+            Menjadi Keluarga Yang Sakinah, Mawaddah, Warahmah. Aamiin
+        </div>
+    </div>          
+    </section>       
+              
+    <footer class="bg-dark" style="color: white; padding: 10px 0;">
+        <div class="container">
+            <div class="text-center">      
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <small class="text-light">
+                            Build with<i class="fas fa-heart mx-1"></i>Anhar
+                        </small>
+                    </div>
+                    <div class="col-auto">
+                        <small>
+                            <i class="fab fa-facebook me-1"></i><a target="_blank" href="https://www.facebook.com/profile.php?id=100093961165463" style="color: white;">  Anhar  </a>
+                        </small>
+                        <small>
+                            <i class="fab fa-whatsapp me-1"></i><a target="_blank" href="https://wa.me/6287841947229" style="color: white;">  6287841947229</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+    function sendMessage() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const event = document.getElementById('event').value;
+      const package = document.getElementById('package').value;
+      const template = document.getElementById('template').value;
+      
+      if (name && phone && event && package && template) {
+        const whatsappMessage = `*Pemesanan undangan digital Bimachord studio*\n*Nama:* ${name}\n*Nomor:* ${phone}\n*Acara:* ${event}\n*Paket:* ${package}\n*Template:* ${template}`;
+        const whatsappUrl = `https://wa.me/6287841947229?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappUrl, '_blank');
+      } else {
+        alert('Silakan lengkapi semua kolom.');
+      }
+    }
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
