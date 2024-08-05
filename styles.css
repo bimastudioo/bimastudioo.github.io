@@ -61,7 +61,7 @@
 .background-section {
   position: relative;
   height: 100vh; /* Mengatur tinggi ke 100vh */
-  background: url('img/Banner.jpg') no-repeat center center; /* Ganti dengan URL gambar latar belakang Anda */
+  background: url('./img/Banner.jpg') no-repeat center center; /* Ganti dengan URL gambar latar belakang Anda */
   background-size: cover; /* Menutup seluruh area */
   display: flex;
   flex-direction: column;
