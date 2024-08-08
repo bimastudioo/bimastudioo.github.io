@@ -192,4 +192,20 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.icon-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red; /* Ganti warna sesuai kebutuhan */
+  text-align: center;
+  line-height: 30px;
+  margin-right: 1px;
+}
 
+.icon-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke; /* Ganti warna sesuai kebutuhan */
+  font-family: 'Font Awesome 5 Free', sans-serif;
+}
