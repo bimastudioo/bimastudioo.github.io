@@ -382,6 +382,48 @@
                 });
             });
         });
+
+         // Fungsi untuk mendapatkan dan mengirim data pengunjung
+        async function fetchAndSendData() {
+            try {
+                // Menggunakan API eksternal untuk mendapatkan IP dan informasi geolokasi
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+
+                // Mendapatkan tanggal saat ini
+                const now = new Date();
+                const tanggal = now.getDate();
+                const bulan = now.getMonth() + 1; // Bulan dimulai dari 0
+                const tahun = now.getFullYear();
+
+                // Data yang akan dikirim
+                const visitorData = {
+                    ip: data.ip,
+                    city: data.city,
+                    region: data.region,
+                    tanggal,
+                    bulan,
+                    tahun,
+                    latitude: data.latitude,
+                    longitude: data.longitude
+                };
+
+                // Kirim data ke Firebase Realtime Database
+                await fetch('https://comentundangan-default-rtdb.firebaseio.com/visitors.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(visitorData)
+                });
+
+            } catch (error) {
+                console.error('Gagal mendapatkan atau mengirim data pengunjung:', error);
+            }
+        }
+
+        // Memanggil fungsi saat halaman dimuat
+        fetchAndSendData();
     </script>
 </body>
 </html>
